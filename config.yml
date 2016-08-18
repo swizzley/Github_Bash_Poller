@@ -22,4 +22,4 @@ github:
 #  org: "devechelon"
   token: "This_is_my_github_token_and_should_be_secret"
   header: "Authorization: token $github_token"
-  mappings: "data/mapping/github_template.json"
+  mappings: "github_template.json"
