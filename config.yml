@@ -1,0 +1,25 @@
+---
+
+## Global Settings
+
+# 0 = quiet, 1 = normal, 2 = debug, 3 = verbose
+LOG_LEVEL: 1
+
+ELASTIC: "http://localhost:9200"
+
+LOG: "data/polling.log"
+
+TRUNCATE: true
+
+# UNCOMMENTED - If you want to throttle the speed to reduce CPU/Memory overhead [Default: $MAX]
+#THREAD_LIMIT: 64
+
+github:
+  api: "api.github.comcast.com"
+# UNCOMMENTED - If you only want to poll only one repo [Spercedes org]
+#  repo: "swizzley/Github_to_ElasticSearch"
+# UNCOMMENTED - If you only want to poll only one organization's repos and users [Spercedes]
+#  org: "devechelon"
+  token: "This_is_my_github_token_and_should_be_secret"
+  header: "Authorization: token $github_token"
+  mappings: "data/mapping/github_template.json"
